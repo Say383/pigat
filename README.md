@@ -43,10 +43,30 @@ pip3 install -r requirements.txt
 python3 start.py -u target.com
 ```
 
-如果 github 下载较慢，也可以使用国内的 gitee 地址进行 clone
+### 可能出现的问题：
+
+1、如果 github 下载较慢，也可以使用国内的 gitee 地址进行 clone
 
 ```
 git clone https://gitee.com/teamssix/pigat.git
+```
+
+2、如果 pip3 install 很慢，可以尝试使用国内 pip 源，比如 -i 指定国内安装源
+
+```
+pip3 install -r requirements.txt -i https://mirrors.aliyun.com/pypi/simple/
+```
+
+3、pip3 install 过程中报错如下信息：
+
+```
+Command "python setup.py egg_info" failed with error code 1 in /tmp/pip-build-oizrq4oe/lxml/
+```
+
+运行以下命令可解决此问题
+
+```
+pip3 install --upgrade setuptools
 ```
 
 ## :raising_hand: 帮助
