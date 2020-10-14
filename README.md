@@ -43,6 +43,12 @@ pip3 install -r requirements.txt
 python3 start.py -u target.com
 ```
 
+如果 github 下载较慢，也可以使用国内的 gitee 地址进行 clone
+
+```
+git clone https://gitee.com/teamssix/pigat.git
+```
+
 ## :raising_hand: 帮助
 
 ```bash
