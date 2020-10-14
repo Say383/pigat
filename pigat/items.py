@@ -39,8 +39,6 @@ class PigatItem_beian(scrapy.Item):
 class PigatItem_subdomain(scrapy.Item):
 	url = scrapy.Field()
 	subdomain_url = scrapy.Field()
-	subdomain_title = scrapy.Field()
-	subdomain_status_code = scrapy.Field()
 	pass
 
 

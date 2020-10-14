@@ -37,7 +37,7 @@ MONGO_DB_URI = 'mongodb://localhost:27017'
 ### 2、安装 pigat
 
 ```bash
-git clone git@github.com:teamssix/pigat.git
+git clone https://github.com/teamssix/pigat.git
 cd pigat
 pip3 install -r requirements.txt
 python3 start.py -u target.com
@@ -152,11 +152,11 @@ com', 'fit.freebuf.com', 'my.freebuf.com', 'shop.freebuf.com', 'api.freebuf.com'
 
 ## :clapper: 运行截图
 
-![](./img/1.png)
+![](https://teamssix.oss-cn-hangzhou.aliyuncs.com/pigat_1.png)
 
-![](./img/2.png)
+![](https://teamssix.oss-cn-hangzhou.aliyuncs.com/Snipaste_2020-03-21_14-30-21.png)
 
-![](./img/3.png)
+![](https://teamssix.oss-cn-hangzhou.aliyuncs.com/Snipaste_2020-03-21_14-30-33.png)
 
 ## :end: 写在最后
 
