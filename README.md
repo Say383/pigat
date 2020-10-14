@@ -6,8 +6,6 @@ Pigat（Passive Intelligence Gathering Aggregation Tool）被动信息收集聚�
 
 开发此工具的初衷就是平时在使用一些第三方的网站进行目标信息收集的时候，往往需要利用多个网站进行目标信息的收集，比如通过在线的Whois信息查询网站、在线的CMS信息查询网站、目标在Shodan上的信息等等，如此一来，就会增加很多重复的工作量，因此便开发了此工具，将平时常用的网站聚合到一个工具里。
 
-该工具在2020年3月21日更新至2.0版本，该版本采用Scrapy框架开发，协程处理，运行速度更快，并且支持文件导出功能，同时修复了多个Bug，增加了多个功能。
-
 ## :clipboard: 功能描述
 
 :ballot_box_with_check: 被动收集备案信息
@@ -24,25 +22,24 @@ Pigat（Passive Intelligence Gathering Aggregation Tool）被动信息收集聚�
 
 :ballot_box_with_check: 被动收集子域名漏洞信息
 
-## :bulb: 使用方法
+## :bulb: 安装
 
-### 1、安装MongoDB
+### 1、安装 MongoDB
 
-这一步可自行百度，如果不是在本地主机安装，则需要在安装MongoDB之后修改`setting.py`文件的第72行，将数据库的URL及端口改为自己设置的即可，默认配置如下：
+MongoDB 官网 [https://www.mongodb.com/](https://www.mongodb.com/)
+
+如果不是在本地主机安装，则需要在安装MongoDB之后修改`setting.py`文件的第72行，将数据库的URL及端口改为自己设置的即可，默认配置如下：
 
 ```python
 MONGO_DB_URI = 'mongodb://localhost:27017'
 ```
 
-### 2、安装第三方模块文件
+### 2、安装 pigat
 
 ```bash
+git clone git@github.com:teamssix/pigat.git
+cd pigat
 pip3 install -r requirements.txt
-```
-
-### 3、开始运行
-
-```bash
 python3 start.py -u target.com
 ```
 
@@ -62,7 +59,6 @@ python3 start.py -u target.com
 ```bash
 - - - - - - - - - - - - - - - - - - - - - - - - - - -
  操作编号：
-
  [1] 被动收集备案信息
  [2] 被动收集 Whois 信息
  [3] 被动收集子域名信息
@@ -71,10 +67,8 @@ python3 start.py -u target.com
  [6] 被动收集子域名 Shodan 信息
  [7] 被动收集子域名漏洞信息
  [8] 退出程序
- 备注：第 3 步执行一次后才可执行 4、5、6 步，第 6 步执行一次后才可执行第 7 步，否则运行会出现错误提示。
+ 备注：执行 4、5、6 步前须执行过第 3 步；执行第 7 步前须执行过第 6 步。
 - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-[2020-03-21 13:36:35] 请输入你的操作步骤 :
 ```
 
 ### python3 start.py -u teamssix.com -a
@@ -158,20 +152,13 @@ com', 'fit.freebuf.com', 'my.freebuf.com', 'shop.freebuf.com', 'api.freebuf.com'
 
 ## :clapper: 运行截图
 
-![](./Run_screenshot/Snipaste_2020-03-21_14-29-32.png)
+![](./img/1.png)
 
-![](./Run_screenshot/Snipaste_2020-03-21_14-30-07.png)
+![](./img/2.png)
 
-![](./Run_screenshot/Snipaste_2020-03-21_14-30-21.png)
-
-![](./Run_screenshot/Snipaste_2020-03-21_14-30-33.png)
-
-## :link: 下载地址
-
-[点击进入下载页面](https://github.com/teamssix/pigat/releases)
+![](./img/3.png)
 
 ## :end: 写在最后
-因为我没有太多的开发经验，因此该工具难免存在有问题以及不恰当的地方，希望各位大佬在使用的过程中碰到问题能够多多反馈。
 
 :star:开发不易，还望大佬们走过路过顺手给个star，小弟将不胜感激。
 
