@@ -2,3 +2,4 @@ Scrapy==1.8.1
 requests==2.22.0
 pymongo==3.10.0
 beautifulsoup4==4.8.2
+urllib3>=1.26.18 # not directly required, pinned by Snyk to avoid a vulnerability
